@@ -34,10 +34,13 @@ void draw(){
   
   
  if(mouseX>170 && mouseX<230 && mouseY>280 && mouseY<340){
-    diam = map(mouseX, 170 ,230, 25, 170);//para mapear "map()"
+   colCuad = color(0,255,0);
+   diam = map(mouseX, 170 ,230, 25, 170);//para mapear "map()"
+   }else{
+    colCuad = color(0);
   }
-   if(mousePressed && mouseX>170 && mouseX<230 && mouseY>280 && mouseY<340){
-     
+  if(mousePressed && mouseX>170 && mouseX<230 && mouseY>280 && mouseY<340){
+     colCuad = color(0,0,255);
      fill(255);
      ellipse(200 ,310 , 40,40);
      stroke(255,0,0);
@@ -51,7 +54,6 @@ void draw(){
     coY=0;
     }
   }
-  
   
   }
   
